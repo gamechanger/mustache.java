@@ -286,7 +286,7 @@ public class MustacheCompiler {
     }
     try {
       MessageDigest md = MessageDigest.getInstance("SHA1");
-      byte[] digest = md.digest(code.toString().getBytes(Charset.forName("UTF-8")));
+      byte[] digest = md.digest(code.toString().getBytes("UTF-8"));
       StringBuilder hash = new StringBuilder();
       for (byte aDigest : digest) {
         hash.append(Integer.toHexString(0xFF & aDigest));
